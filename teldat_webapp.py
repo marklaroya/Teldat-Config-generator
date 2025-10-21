@@ -91,12 +91,13 @@ st.markdown(
     """
     <hr style='margin-top:40px;'>
     <div style='text-align:center; color:gray; font-size:14px;'>
-        © 2025 <b>Your Company Name</b>. All rights reserved.<br>
+        © 2025 <b>Integrated BigData Technologies Corp.</b>. All rights reserved.<br>
         Developed by <b>Integrated BigData Technologies Corp.</b>
     </div>
     """,
     unsafe_allow_html=True
 )
+
 
 
 
