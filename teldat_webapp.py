@@ -7,7 +7,11 @@ import shutil
 from datetime import datetime
 
 # -------------------- PAGE CONFIG --------------------
-st.set_page_config(page_title="Teldat InterVlan Config Generator", page_icon="⚙️")
+st.set_page_config(
+    page_title="Teldat Config Generator",
+    page_icon="https://github.com/marklaroya/Teldat-Config-generator/blob/main/Integrated%20BigData%20Technologies.png?raw=true",
+    layout="centered"
+)
 
 # -------------------- HEADER WITH CENTERED LOGO --------------------
 st.markdown(
@@ -15,7 +19,7 @@ st.markdown(
     <div style='text-align:center; margin-top:-30px;'>
         <img src='https://github.com/marklaroya/Teldat-Config-generator/blob/main/Integrated%20BigData%20Technologies.png?raw=true'
              width='90' style='margin-bottom:10px; border-radius:10px;'>
-        <h1 style='margin-bottom:0; color:white;'>⚙️ Teldat Router Config Generator</h1>
+        <h1 style='margin-bottom:0; color:white;'>⚙️ Teldat InterVlan Config Generator</h1>
         <h4 style='color:gray; margin-top:5px;'>Powered by <b>Integrated BigData Technologies Corp.</b></h4>
         <hr style='border:1px solid #555; margin-top:15px;'>
     </div>
@@ -93,6 +97,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
