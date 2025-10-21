@@ -32,7 +32,7 @@ st.write("Upload your CSV and Template file to automatically generate router con
 
 # -------------------- FILE UPLOAD SECTION --------------------
 uploaded_csv = st.file_uploader("📄 Upload teldat_sites.csv", type=["csv"])
-uploaded_template = st.file_uploader("📄 Upload Teldat Template (.txt)", type=["txt"])
+uploaded_template = st.file_uploader("📄 Upload Teldat M1 or RS InterVlan Template (.txt)", type=["txt"])
 
 # -------------------- GENERATE CONFIGS BUTTON --------------------
 if st.button(" Generate Configs"):
@@ -97,6 +97,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
