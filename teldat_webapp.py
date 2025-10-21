@@ -10,7 +10,7 @@ from datetime import datetime
 st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 
 # -------------------- COMPANY LOGO --------------------
-st.image("Integrated BigData Technologies.png", width=120)
+st.image("Integrated BigData Technologies.png", width=20)
 
 # -------------------- HEADER --------------------
 st.markdown(
@@ -93,5 +93,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
