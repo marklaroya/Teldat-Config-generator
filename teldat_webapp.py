@@ -9,6 +9,9 @@ from datetime import datetime
 # -------------------- PAGE CONFIG --------------------
 st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 
+# -------------------- COMPANY LOGO --------------------
+st.image("Integrated BigData Technologies.png", width=120)
+
 # -------------------- HEADER --------------------
 st.markdown(
     """
@@ -81,7 +84,6 @@ if st.button(" Generate Configs"):
 
 # -------------------- FOOTER --------------------
 st.markdown(
-    st.image("Integrated BigData Technologies.png", width=120)
     """
     <hr style='margin-top:40px;'>
     <div style='text-align:center; color:gray; font-size:14px;'>
@@ -91,4 +93,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
