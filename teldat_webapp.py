@@ -7,7 +7,7 @@ import shutil
 from datetime import datetime
 
 # -------------------- PAGE CONFIG --------------------
-st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
+st.set_page_config(page_title="Teldat InterVlan Config Generator", page_icon="⚙️")
 
 # -------------------- HEADER WITH CENTERED LOGO --------------------
 st.markdown(
@@ -93,6 +93,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
