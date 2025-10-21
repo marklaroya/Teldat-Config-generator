@@ -9,20 +9,20 @@ from datetime import datetime
 # -------------------- PAGE CONFIG --------------------
 st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 
-# -------------------- COMPANY LOGO --------------------
-st.image("Integrated BigData Technologies.png", width=20)
-
-# -------------------- HEADER --------------------
+# -------------------- HEADER WITH CENTERED LOGO --------------------
 st.markdown(
     """
-    <div style='text-align:center; margin-bottom:20px;'>
-        <h1 style='margin-bottom:0;'>⚙️ Teldat Router Config Generator</h1>
-        <h4 style='color:gray; margin-top:5px;'>Powered by <b>Integrated BigData Technologies corp. </b></h4>
-        <hr style='border:1px solid #ccc;'>
+    <div style='text-align:center; margin-top:-30px;'>
+        <img src='Integrated_BigData_Technologies.png'
+             width='150' style='margin-bottom:10px; border-radius:10px;'>
+        <h1 style='margin-bottom:0; color:white;'>⚙️ Teldat Router Config Generator</h1>
+        <h4 style='color:gray; margin-top:5px;'>Powered by <b>Integrated BigData Technologies Corp.</b></h4>
+        <hr style='border:1px solid #555; margin-top:15px;'>
     </div>
     """,
     unsafe_allow_html=True
 )
+
 
 st.write("Upload your CSV and Template file to automatically generate router configuration files.")
 
@@ -93,6 +93,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
