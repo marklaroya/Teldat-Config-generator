@@ -13,7 +13,7 @@ st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 st.markdown(
     """
     <div style='text-align:center; margin-top:-30px;'>
-        <img src='https://raw.githubusercontent.com/marklaroya/teldat-config-generator/main/Integrated_BigData_Technologies.png'
+        <img src='https://github.com/marklaroya/Teldat-Config-generator/blob/main/Integrated%20BigData%20Technologies.png?raw=true'
              width='150' style='margin-bottom:10px; border-radius:10px;'>
         <h1 style='margin-bottom:0; color:white;'>⚙️ Teldat Router Config Generator</h1>
         <h4 style='color:gray; margin-top:5px;'>Powered by <b>Integrated BigData Technologies Corp.</b></h4>
@@ -93,6 +93,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
