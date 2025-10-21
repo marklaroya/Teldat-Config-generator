@@ -4,17 +4,30 @@ import os
 import io
 import zipfile
 import shutil
+from datetime import datetime
 
+# -------------------- PAGE CONFIG --------------------
 st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 
-st.title("⚙️ Teldat Router Config Generator")
-st.write("Upload your CSV and Template file to automatically generate configuration files.")
+# -------------------- HEADER --------------------
+st.markdown(
+    """
+    <div style='text-align:center; margin-bottom:20px;'>
+        <h1 style='margin-bottom:0;'>⚙️ Teldat Router Config Generator</h1>
+        <h4 style='color:gray; margin-top:5px;'>Powered by <b>Integrated BigData Technologies corp. </b></h4>
+        <hr style='border:1px solid #ccc;'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-# --- File upload section ---
+st.write("Upload your CSV and Template file to automatically generate router configuration files.")
+
+# -------------------- FILE UPLOAD SECTION --------------------
 uploaded_csv = st.file_uploader("📄 Upload teldat_sites.csv", type=["csv"])
 uploaded_template = st.file_uploader("📄 Upload Teldat Template (.txt)", type=["txt"])
 
-# --- Generate button ---
+# -------------------- GENERATE CONFIGS BUTTON --------------------
 if st.button("🚀 Generate Configs"):
     if uploaded_csv and uploaded_template:
         try:
@@ -45,11 +58,15 @@ if st.button("🚀 Generate Configs"):
                             zipf.write(os.path.join(root, file), arcname=file)
                 zip_buffer.seek(0)
 
+                # Dynamic ZIP filename with date
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+                zip_filename = f"teldat_configs_{timestamp}.zip"
+
                 st.success("✅ Configs generated successfully!")
                 st.download_button(
                     label="⬇️ Download All Configs (ZIP)",
                     data=zip_buffer,
-                    file_name="teldat_configs.zip",
+                    file_name=zip_filename,
                     mime="application/zip"
                 )
             else:
@@ -61,3 +78,15 @@ if st.button("🚀 Generate Configs"):
 
     else:
         st.warning("Please upload both CSV and template files first.")
+
+# -------------------- FOOTER --------------------
+st.markdown(
+    """
+    <hr style='margin-top:40px;'>
+    <div style='text-align:center; color:gray; font-size:14px;'>
+        © 2025 <b>Your Company Name</b>. All rights reserved.<br>
+        Developed by <b>Mark Lester Laroyast.image("Integrated BigData Technologies.png", width=120)</b>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
