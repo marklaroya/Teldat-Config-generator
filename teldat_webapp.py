@@ -28,7 +28,7 @@ uploaded_csv = st.file_uploader("📄 Upload teldat_sites.csv", type=["csv"])
 uploaded_template = st.file_uploader("📄 Upload Teldat Template (.txt)", type=["txt"])
 
 # -------------------- GENERATE CONFIGS BUTTON --------------------
-if st.button("🚀 Generate Configs"):
+if st.button(" Generate Configs"):
     if uploaded_csv and uploaded_template:
         try:
             # Save uploaded files
@@ -81,12 +81,14 @@ if st.button("🚀 Generate Configs"):
 
 # -------------------- FOOTER --------------------
 st.markdown(
+    st.image("Integrated BigData Technologies.png", width=120)
     """
     <hr style='margin-top:40px;'>
     <div style='text-align:center; color:gray; font-size:14px;'>
         © 2025 <b>Your Company Name</b>. All rights reserved.<br>
-        Developed by <b>Mark Lester Laroyast.image("Integrated BigData Technologies.png", width=120)</b>
+        Developed by <b>Mark Lester Laroya</b>
     </div>
     """,
     unsafe_allow_html=True
 )
+
