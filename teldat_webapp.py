@@ -1,6 +1,27 @@
 import streamlit as st
 import subprocess
 import os
+import zipfile
+import io
+
+output_folder = "output_configs"
+zip_filename = "teldat_configs.zip"
+
+# Zip all generated config files
+zip_buffer = io.BytesIO()
+with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
+    for root, _, files in os.walk(output_folder):
+        for file in files:
+            zipf.write(os.path.join(root, file), arcname=file)
+zip_buffer.seek(0)
+
+st.success("✅ Configs generated successfully!")
+st.download_button(
+    label="⬇️ Download All Configs (ZIP)",
+    data=zip_buffer,
+    file_name=zip_filename,
+    mime="application/zip"
+)
 
 st.set_page_config(page_title="Teldat Config Generator", page_icon="⚙️")
 
@@ -25,3 +46,7 @@ if st.button("Generate Configs"):
             st.text(result.stderr)
     else:
         st.warning("Please upload both CSV and template files first.")
+
+
+
+
