@@ -3,6 +3,11 @@ import subprocess
 import os
 import zipfile
 import io
+import shutil
+
+if os.path.exists("output_configs"):
+    shutil.rmtree("output_configs")
+os.makedirs("output_configs", exist_ok=True)
 
 output_folder = "output_configs"
 zip_filename = "teldat_configs.zip"
@@ -46,6 +51,7 @@ if st.button("Generate Configs"):
             st.text(result.stderr)
     else:
         st.warning("Please upload both CSV and template files first.")
+
 
 
 
